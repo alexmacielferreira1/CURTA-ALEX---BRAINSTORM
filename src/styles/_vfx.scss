@@ -1,0 +1,70 @@
+@use 'variaveis';
+
+.vfx {
+  padding: 2vw 5.6vw;
+  min-height: 50vw;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: variaveis.$corPrimariaTitulos;
+  }
+
+  &__tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 2rem;
+
+    &__button {
+      background: variaveis.$corSecundariaAcentos;
+      border: none;
+      color: variaveis.$corTextoBase;
+      padding: 10px 20px;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+
+      &:hover,
+      &:focus {
+        background-color: variaveis.$corDestaqueContraste;
+        color: #000;
+        outline: none;
+        box-shadow: 0 0 12px variaveis.$corDestaqueContraste;
+      }
+
+      &--is--active {
+        background-color: variaveis.$corDestaqueContraste;
+        color: #000;
+        box-shadow: 0 0 15px variaveis.$corDestaqueContraste;
+      }
+    }
+  }
+
+  &__list__item {
+    display: none;
+    margin-top: 20px;
+    color: variaveis.$corTextoBase;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 6px;
+
+    img {
+      max-width: 200px;
+      border-radius: 6px;
+      margin: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px variaveis.$corSecundariaAcentos;
+      }
+    }
+  }
+
+  &__list--is--active {
+    display: block;
+  }
+}

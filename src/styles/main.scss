@@ -1,0 +1,168 @@
+    @use 'variaveis';
+    @use 'hero';
+    @use 'vfx';
+
+    /* Reset básico */
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+
+    .hero {
+  padding: 5.6vw;
+  min-height: 80vh;
+  background-image: url("../images/Foto1.jpg");
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+    body {
+    background-color: variaveis.$corFundoPrincipal;
+    color: variaveis.$corTextoBase;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    }
+
+    header {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(variaveis.$corFundoPrincipal, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    }
+
+    /* Nome Brainstorm com fonte Orbitron */
+    .logo {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: variaveis.$corTextoBase;
+    user-select: none;
+    }
+
+    .menu {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    color: variaveis.$corPrimariaTitulos;
+    user-select: none;
+    margin-left: auto;
+    white-space: nowrap;
+    }
+
+    nav {
+    display: flex;
+    gap: 20px;
+    }
+
+    nav a {
+    color: variaveis.$corTextoBase;
+    text-decoration: none;
+    font-weight: 300;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition:
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a:focus {
+    color: variaveis.$corDestaqueContraste;
+    // Aqui você comentou o $corGlowHover, então comentei o uso também.
+    // box-shadow: 0 0 8px 2px variaveis.$corGlowHover;
+    outline: none;
+    }
+
+    section {
+    padding: 90px 20px 40px;
+    max-width: 900px;
+    margin: auto;
+    }
+
+    h1,
+    h2 {
+    color: variaveis.$corPrimariaTitulos;
+    margin-bottom: 15px;
+    }
+
+    /* Banner Trailer */
+    .banner {
+    background-color:variaveis.$corFundoPrincipal;
+    padding: 80px 20px;
+    text-align: center;
+    color: variaveis.$corTextoBase;
+    margin-bottom: 40px;
+    }
+
+    
+    /* Galeria simples */
+    .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    }
+
+    .gallery img {
+    max-width: 200px;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    }
+
+    .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px variaveis.$corSecundariaAcentos;
+    }
+
+    /* Imagem equipe responsiva */
+    #equipe img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px variaveis.$corPrimariaTitulos;
+    }
+
+    /* Contato */
+    #contato p {
+    font-size: 1.1rem;
+    }
+
+    /* Responsividade */
+    @media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .logo {
+        margin-right: 0;
+        font-size: 1.4rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    section {
+        padding-top: 100px;
+        margin: 0 10px;
+    }
+    }
+
+
+    .makingof-content {
+  display: none;
+}
+.makingof-content.active {
+  display: block;
+}

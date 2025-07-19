@@ -1,0 +1,217 @@
+@charset "UTF-8";
+.hero {
+  padding: 5.6vw;
+  min-height: 80vh;
+  background-image: url("../images/Foto1.jpg");
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.vfx {
+  padding: 2vw 5.6vw;
+  min-height: 50vw;
+}
+.vfx__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #142a8c;
+}
+.vfx__tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+.vfx__tabs__button {
+  background: #00BFFF;
+  border: none;
+  color: #F5F5F5;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.vfx__tabs__button:hover, .vfx__tabs__button:focus {
+  background-color: #00ff22;
+  color: #000;
+  outline: none;
+  box-shadow: 0 0 12px #00ff22;
+}
+.vfx__tabs__button--is--active {
+  background-color: #00ff22;
+  color: #000;
+  box-shadow: 0 0 15px #00ff22;
+}
+.vfx__list__item {
+  display: none;
+  margin-top: 20px;
+  color: #F5F5F5;
+  background-color: #222;
+  padding: 15px;
+  border-radius: 6px;
+}
+.vfx__list__item img {
+  max-width: 200px;
+  border-radius: 6px;
+  margin: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.vfx__list__item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00BFFF;
+}
+.vfx__list--is--active {
+  display: block;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  padding: 5.6vw;
+  min-height: 80vh;
+  background-image: url("../images/Foto1.jpg");
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body {
+  background-color: #0545bd;
+  color: #F5F5F5;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: rgba(5, 69, 189, 0.8);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Nome Brainstorm com fonte Orbitron */
+.logo {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #F5F5F5;
+  user-select: none;
+}
+
+.menu {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  color: #142a8c;
+  user-select: none;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #F5F5F5;
+  text-decoration: none;
+  font-weight: 300;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #00ff22;
+  outline: none;
+}
+
+section {
+  padding: 90px 20px 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h1,
+h2 {
+  color: #142a8c;
+  margin-bottom: 15px;
+}
+
+/* Banner Trailer */
+.banner {
+  background-color: #0545bd;
+  padding: 80px 20px;
+  text-align: center;
+  color: #F5F5F5;
+  margin-bottom: 40px;
+}
+
+/* Galeria simples */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.gallery img {
+  max-width: 200px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00BFFF;
+}
+
+/* Imagem equipe responsiva */
+#equipe img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #142a8c;
+}
+
+/* Contato */
+#contato p {
+  font-size: 1.1rem;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+  .logo {
+    margin-right: 0;
+    font-size: 1.4rem;
+  }
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  section {
+    padding-top: 100px;
+    margin: 0 10px;
+  }
+}
