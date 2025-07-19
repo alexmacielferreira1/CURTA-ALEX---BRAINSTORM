@@ -14,5 +14,8 @@
     "gulp": "^4.0.2",
     "gulp-sass": "^6.0.1",
     "sass": "^1.89.2"
+  },
+  "dependencies": {
+    "grunt-contrib-less": "^3.0.0"
   }
 }
